@@ -9,4 +9,4 @@ export function shallow(Component, { store, props }: any) {
   return Enzyme.shallow(<Component {...props} />);
 }
 
-export type ShallowWrapper = Enzyme.ShallowWrapper<any, any>;
+export type ShallowWrapper<TProps, TState> = Enzyme.ShallowWrapper<TProps, TState>;
