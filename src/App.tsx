@@ -1,21 +1,27 @@
 import * as React from 'react';
 import './App.css';
 
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
 import { createBrowserHistory } from 'history';
 import { Link, Route, Router, Switch } from 'react-router-dom';
 
+import reducers from './reducers';
+
 import Home from './components/home';
 
+const store = createStore(reducers);
 const history = createBrowserHistory();
 
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <Provider store={store} key="provider">
         <Router history={history}>
           <div>
             <header>
-              <h2>React / TS</h2>
+              <h2>React / TS / Redux</h2>
             </header>
             <main>
               <ul>
@@ -36,7 +42,7 @@ class App extends React.Component {
             </main>
           </div>
         </Router>
-      </div>
+      </Provider>
     );
   }
 }
