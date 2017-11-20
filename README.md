@@ -9,3 +9,4 @@ Each Pull Request will contain explanation and steps taken to complete a feature
 ## Tests
 
 - [Setup tests](https://github.com/brunolm/react-how-to/pull/1)
+- [Add project on Travis CI](https://github.com/brunolm/react-how-to/pull/2)
