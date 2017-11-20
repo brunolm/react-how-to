@@ -14,5 +14,7 @@ Each Pull Request will contain explanation and steps taken to complete a feature
 - [Setup tests](https://github.com/brunolm/react-how-to/pull/1)
 - [Setup test coverage](https://github.com/brunolm/react-how-to/pull/5)
 
+### CI and Coverage tools
+
 - [Add project on Travis CI](https://github.com/brunolm/react-how-to/pull/2)
 - [Add project on Coveralls](https://github.com/brunolm/react-how-to/pull/8)
