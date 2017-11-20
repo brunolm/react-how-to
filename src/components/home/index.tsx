@@ -2,8 +2,22 @@ import './index.css';
 
 import * as React from 'react';
 
+import { Dispatch, connect } from 'react-redux';
+
+import { homeTypes } from '../../actions';
+
+const mapStateToProps = (state) => {
+  return {
+    ...state.homeReducer,
+  };
+};
+
+const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
+  toggleLoading: (options) => dispatch({ type: homeTypes.loading, ...options }),
+});
+
 export interface Props {
-  something?: string;
+  loading: boolean;
 }
 export interface PropsWithRoute {
   match: {
@@ -12,44 +26,41 @@ export interface PropsWithRoute {
     };
   };
 }
-
-export interface State {
-  loading: boolean;
+export interface PropsDispatcher {
+  toggleLoading: (options: any) => void;
 }
 
-export default class Home extends React.Component<Props & PropsWithRoute, State> {
-  constructor(props) {
-    super(props);
+@(connect(mapStateToProps, mapDispatchToProps) as any)
+export default class Home extends React.Component<Props & PropsWithRoute & PropsDispatcher, {}> {
+  toggleStatus = () => {
+    const { loading } = this.props;
 
-    this.state = {
-      loading: false,
-    };
+    this.props.toggleLoading({
+      loading: !loading,
+    });
   }
 
-  toggleStatus = () => {
-    const { loading } = this.state;
+  renderLoading() {
+    const { loading } = this.props;
 
-    this.setState({ loading: !loading });
+    if (loading) {
+      return (<span className="loading active">Loading...</span>);
+    }
+
+    return (<span className="loading">Done.</span>);
   }
 
   render() {
     const { params } = this.props.match;
-    const { loading } = this.state;
-
     const name = params.name || 'no name';
 
     return (
-      <div>
+      <main>
         <h3 className="name-title">Hello {name}</h3>
         <button className="toggle-status" onClick={this.toggleStatus}>Toggle Status</button>
 
-        {loading &&
-          <span>Loading...</span>
-        }
-        {!loading &&
-          <span>Done.</span>
-        }
-      </div>
+        {this.renderLoading()}
+      </main>
     );
   }
 }
