@@ -12,6 +12,7 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "coverage": "npm test -- --coverage",
+    "coveralls": "coveralls < ./coverage/lcov.info",
     "eject": "react-scripts-ts eject"
   },
   "jest": {
@@ -28,6 +29,7 @@
     "@types/node": "^8.0.53",
     "@types/react": "^16.0.25",
     "@types/react-dom": "^16.0.3",
+    "coveralls": "^3.0.0",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "raf": "^3.4.0"
