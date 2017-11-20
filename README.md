@@ -1,5 +1,6 @@
 # React: How To
 [![Build Status](https://travis-ci.org/brunolm/react-how-to.svg?branch=master)](https://travis-ci.org/brunolm/react-how-to)
+[![Coverage Status](https://coveralls.io/repos/github/brunolm/react-how-to/badge.svg?branch=coveralls)](https://coveralls.io/github/brunolm/react-how-to?branch=coveralls)
 
 Each Pull Request will contain explanation and steps taken to complete a feature.
 
@@ -14,3 +15,4 @@ Each Pull Request will contain explanation and steps taken to complete a feature
 - [Setup test coverage](https://github.com/brunolm/react-how-to/pull/5)
 
 - [Add project on Travis CI](https://github.com/brunolm/react-how-to/pull/2)
+- [Add project on Coveralls](https://github.com/brunolm/react-how-to/pull/8)
