@@ -1,6 +1,5 @@
-import Home, { Props, PropsWithRoute, State } from './';
-
 import { shallow, ShallowWrapper } from '../../specHelper';
+import Home, { Props, PropsWithRoute, State } from './home';
 
 describe('Home', () => {
   let component: ShallowWrapper<Props & PropsWithRoute, State>;
@@ -24,11 +23,11 @@ describe('Home', () => {
   it('toggles status on button click', () => {
     const toggleStatusButton = component.find('.toggle-status');
 
-    expect(component.state().loading).toBeFalsy();
+    expect(component.state().elementOne).toBeFalsy();
 
     toggleStatusButton.simulate('click');
 
-    expect(component.state().loading).toBeTruthy();
+    expect(component.state().elementOne).toBeTruthy();
   });
 
   it('displays name value from url param', () => {
