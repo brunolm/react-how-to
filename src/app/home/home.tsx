@@ -58,7 +58,7 @@ export default class Home extends React.Component<Props & PropsWithRoute, State>
         {elementOne && <span>Element #1</span>}
         {!elementOne && <span>Another element</span>}
 
-        <hr/>
+        <hr />
         <Counter />
         {/* <Counter store={store} /> */}
       </div>

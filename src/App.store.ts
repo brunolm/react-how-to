@@ -1,11 +1,9 @@
 import { action, observable } from 'mobx';
 
 export default class AppStore {
-  @observable
-  title = 'Initial title';
+  @observable title = 'Initial title';
 
-  @observable
-  counter = 0;
+  @observable counter = 0;
 
   @action
   updateTitle() {
