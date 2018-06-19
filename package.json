@@ -54,6 +54,8 @@
     "lint-staged": "^7.2.0",
     "prettier": "^1.13.5",
     "raf": "^3.4.0",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
     "typescript": "^2.9.2"
   }
 }

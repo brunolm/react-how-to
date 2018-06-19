@@ -37,8 +37,9 @@ export default class Home extends React.Component<Props & PropsWithRoute, State>
     const { elementOne } = this.state;
 
     this.setState({ elementOne: !elementOne });
+
     this.props.store.updateTitle();
-  }
+  };
 
   render() {
     const { store } = this.props;
