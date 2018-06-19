@@ -1,6 +1,6 @@
 import { action, observable } from 'mobx';
 
-export default class AppStore {
+export class AppStore {
   @observable title = 'Initial title';
 
   @observable counter = 0;
@@ -15,3 +15,4 @@ export default class AppStore {
     this.counter++;
   }
 }
+export default new AppStore();
