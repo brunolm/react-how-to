@@ -1,0 +1,12 @@
+.contact-form {
+  background: silver;
+  padding: 10px;
+}
+
+.contact-form > div {
+  margin-bottom: 10px;
+}
+
+.contact-form label {
+  display: block;
+}
