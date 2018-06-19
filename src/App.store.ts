@@ -7,7 +7,9 @@ export class AppStore {
 
   @action
   updateTitle() {
-    this.title = Math.random().toString(32);
+    const offset = 32;
+
+    this.title = Math.random().toString(offset);
   }
 
   @action

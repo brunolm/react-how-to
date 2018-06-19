@@ -26,7 +26,7 @@ export default class ContactForm extends React.Component<Props, State> {
 
         <div>
           <label htmlFor="text">Text</label>
-          <textarea name="text" cols={30} rows={10} />
+          <textarea name="text" />
         </div>
 
         <div>

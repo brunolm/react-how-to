@@ -46,7 +46,8 @@
       "prefer-template": true,
       "quotemark": [
         true,
-        "single"
+        "single",
+        "jsx-double"
       ],
       "type-literal-delimiter": true
     }
