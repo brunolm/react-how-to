@@ -5,7 +5,7 @@ describe('Gravatar', () => {
   let component: ShallowWrapper<Props, State>;
 
   beforeEach(() => {
-    component = shallow(Gravatar, {});
+    component = shallow(Gravatar, { props: { email: 'brunolm7@gmail.com' } });
   });
 
   it('renders without crashing', () => {

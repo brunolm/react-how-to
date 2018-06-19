@@ -1,4 +1,4 @@
-import md5 from 'md5';
+import * as md5 from 'md5';
 import * as React from 'react';
 
 export interface Props {
