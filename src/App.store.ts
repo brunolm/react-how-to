@@ -1,9 +1,15 @@
 import { action, observable } from 'mobx';
 
+import homeStore from './app/home/home.store';
+
 export class AppStore {
   @observable title = 'Initial title';
 
   @observable counter = 0;
+
+  //
+  home = homeStore;
+  //
 
   @action
   updateTitle() {

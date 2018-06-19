@@ -3,7 +3,8 @@ import './home.css';
 import { inject, observer } from 'mobx-react';
 import * as React from 'react';
 
-import Counter from './counter/couter';
+// import Counter from './counter/couter';
+import HomeInput from './home-input/home-input';
 
 export interface Props {
   something?: string;
@@ -60,8 +61,13 @@ export default class Home extends React.Component<Props & PropsWithRoute, State>
         {!elementOne && <span>Another element</span>}
 
         <hr />
-        <Counter />
-        {/* <Counter store={store} /> */}
+        {/* <Counter /> */}
+
+        <div>
+          {[1, 1 + 1, 1 + 1 + 1].map((id) => {
+            return <HomeInput key={id} id={id} />;
+          })}
+        </div>
       </div>
     );
   }
