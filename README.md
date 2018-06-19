@@ -8,6 +8,8 @@ Each Pull Request will contain explanation and steps taken to complete a feature
 
 - [Create a new React project](https://github.com/brunolm/react-how-to/commit/823bbc7b6b76b35b94bf9d49a90fc9c9763023b2)
 - [Configure editorconfig](https://github.com/brunolm/react-how-to/pull/3)
+- [Configure prettier on pre-commit](https://github.com/brunolm/react-how-to/pull/12)
+- [Setup project architecture](https://github.com/brunolm/react-how-to/pull/11)
 
 ## Tests
 
