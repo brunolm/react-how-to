@@ -11,6 +11,10 @@ Each Pull Request will contain explanation and steps taken to complete a feature
 - [Configure prettier on pre-commit](https://github.com/brunolm/react-how-to/pull/12)
 - [Setup project architecture](https://github.com/brunolm/react-how-to/pull/11)
 
+## Mobx (redux like)
+
+- [Configure Mobx](https://github.com/brunolm/react-how-to/pull/13)
+
 ## Tests
 
 - [Setup tests](https://github.com/brunolm/react-how-to/pull/1)
