@@ -1,4 +1,4 @@
-import './App.css';
+import './app.css';
 
 import { createBrowserHistory } from 'history';
 import { inject, observer } from 'mobx-react';
