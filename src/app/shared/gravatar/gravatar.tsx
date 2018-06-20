@@ -10,7 +10,6 @@ export interface State {
 }
 
 export default class Gravatar extends React.Component<Props, State> {
-
   render() {
     const hash = md5(this.props.email);
 

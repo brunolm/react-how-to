@@ -16,7 +16,9 @@ export default class AboutInfo extends React.Component<Props, State> {
       <div>
         <h2>About info box</h2>
         <p>Some text in here</p>
-        <p>Your message was: <b>{this.props.message}</b></p>
+        <p>
+          Your message was: <b>{this.props.message}</b>
+        </p>
       </div>
     );
   }
