@@ -5,8 +5,8 @@ import { Provider } from 'mobx-react';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import App from './App';
-import appStore from './App.store';
+import App from './app/app';
+import appStore from './app/app.store';
 import registerServiceWorker from './registerServiceWorker';
 
 configure({ enforceActions: true });

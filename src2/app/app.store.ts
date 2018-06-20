@@ -1,6 +1,6 @@
 import { action, observable } from 'mobx';
 
-import homeStore from './app/home/home.store';
+import homeStore from './home/home.store';
 
 export class AppStore {
   @observable title = 'Initial title';

@@ -6,15 +6,15 @@ import DevTools from 'mobx-react-devtools';
 import * as React from 'react';
 import { Link, Route, Router, Switch } from 'react-router-dom';
 
-import About from './app/about/about';
-import Contact from './app/contact/contact';
-import Home from './app/home/home';
+import About from './about/about';
+import Contact from './contact/contact';
+import Home from './home/home';
 
 const history = createBrowserHistory();
 
 @inject('store')
 @observer
-class App extends React.Component<any, any> {
+export default class App extends React.Component<any, any> {
   render() {
     return (
       <div className="app">
@@ -58,5 +58,3 @@ class App extends React.Component<any, any> {
     );
   }
 }
-
-export default App;
