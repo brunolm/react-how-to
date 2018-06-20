@@ -1,8 +1,11 @@
-import { shallow, ShallowWrapper } from '../../specHelper';
+import * as Enzyme from 'enzyme';
+import * as React from 'react';
+
+import appStore from '../app.store';
 import Home, { Props, PropsWithRoute, State } from './home';
 
 describe('Home', () => {
-  let component: ShallowWrapper<Props & PropsWithRoute, State>;
+  let component: Enzyme.ShallowWrapper<Props & PropsWithRoute, State>;
 
   beforeEach(() => {
     const routerProps = {
@@ -13,46 +16,10 @@ describe('Home', () => {
       },
     };
 
-    component = shallow(Home, { props: routerProps });
+    component = Enzyme.shallow(<Home store={appStore} {...routerProps} />);
   });
 
   it('renders without crashing', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('toggles status on button click', () => {
-    const toggleStatusButton = component.find('.toggle-status');
-
-    expect(component.state().elementOne).toBeFalsy();
-
-    toggleStatusButton.simulate('click');
-
-    expect(component.state().elementOne).toBeTruthy();
-  });
-
-  it('displays name value from url param', () => {
-    const nameTitle = component.find('h3.name-title');
-
-    expect(nameTitle.text()).toBe('Hello brunolm');
-  });
-
-  describe('', () => {
-    beforeEach(() => {
-      const routerProps = {
-        match: {
-          params: {
-            name: undefined,
-          },
-        },
-      };
-
-      component = shallow(Home, { props: routerProps });
-    });
-
-    it('displays "no name" when there are no values from url param', () => {
-      const nameTitle = component.find('h3.name-title');
-
-      expect(nameTitle.text()).toBe('Hello no name');
-    });
   });
 });

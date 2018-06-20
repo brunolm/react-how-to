@@ -14,10 +14,11 @@ export interface State {
 export default class Contact extends React.Component<Props, State> {
   render() {
     return (
-    <div>
-      <h2>Contact page works</h2>
+      <div>
+        <h2>Contact page works</h2>
 
-      <ContactForm />
-    </div>);
+        <ContactForm />
+      </div>
+    );
   }
 }
