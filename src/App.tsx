@@ -1,6 +1,8 @@
 import './App.css';
 
 import { createBrowserHistory } from 'history';
+import { inject, observer } from 'mobx-react';
+import DevTools from 'mobx-react-devtools';
 import * as React from 'react';
 import { Link, Route, Router, Switch } from 'react-router-dom';
 
@@ -10,7 +12,9 @@ import Home from './app/home/home';
 
 const history = createBrowserHistory();
 
-class App extends React.Component {
+@inject('store')
+@observer
+class App extends React.Component<any, any> {
   render() {
     return (
       <div className="app">
@@ -40,14 +44,16 @@ class App extends React.Component {
               <hr />
 
               <Switch>
-                <Route exact={true} path="/" component={Home} />
-                <Route path="/home/:name" component={Home} />
+                <Route exact={true} path="/" component={Home} />} />
+                <Route path="/home/:name" component={Home} />} />
                 <Route path="/about" component={About} />
                 <Route path="/contact" component={Contact} />
               </Switch>
             </main>
           </div>
         </Router>
+
+        <DevTools />
       </div>
     );
   }

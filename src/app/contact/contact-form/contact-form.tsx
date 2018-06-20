@@ -16,17 +16,17 @@ export default class ContactForm extends React.Component<Props, State> {
       <form className="contact-form">
         <div>
           <label htmlFor="name">Name</label>
-          <input type="text" name="name"/>
+          <input type="text" name="name" />
         </div>
 
         <div>
           <label htmlFor="email">email</label>
-          <input type="text" name="email"/>
+          <input type="text" name="email" />
         </div>
 
         <div>
           <label htmlFor="text">Text</label>
-          <textarea name="text" cols={30} rows={10} />
+          <textarea name="text" />
         </div>
 
         <div>

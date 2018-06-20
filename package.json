@@ -6,6 +6,7 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
+    "lint": "tslint --project tsconfig.json src/**/*.ts src/**/*.tsx",
     "coverage": "npm test -- --coverage",
     "coveralls": "coveralls < ./coverage/lcov.info",
     "eject": "react-scripts-ts eject"
@@ -29,6 +30,9 @@
   },
   "dependencies": {
     "md5": "^2.2.1",
+    "mobx": "^5.0.3",
+    "mobx-react": "^5.2.3",
+    "mobx-react-devtools": "^5.0.1",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-router": "^4.2.0",
@@ -51,6 +55,8 @@
     "lint-staged": "^7.2.0",
     "prettier": "^1.13.5",
     "raf": "^3.4.0",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
     "typescript": "^2.9.2"
   }
 }

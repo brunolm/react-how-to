@@ -1,9 +1,14 @@
 import './home.css';
 
+import { inject, observer } from 'mobx-react';
 import * as React from 'react';
+
+// import Counter from './counter/couter';
+import HomeInput from './home-input/home-input';
 
 export interface Props {
   something?: string;
+  store: any;
 }
 
 export interface PropsWithRoute {
@@ -18,6 +23,8 @@ export interface State {
   elementOne: boolean;
 }
 
+@inject('store')
+@observer
 export default class Home extends React.Component<Props & PropsWithRoute, State> {
   constructor(props) {
     super(props);
@@ -31,9 +38,12 @@ export default class Home extends React.Component<Props & PropsWithRoute, State>
     const { elementOne } = this.state;
 
     this.setState({ elementOne: !elementOne });
-  }
+
+    this.props.store.updateTitle();
+  };
 
   render() {
+    const { store } = this.props;
     const { params } = this.props.match;
     const { elementOne } = this.state;
 
@@ -41,6 +51,7 @@ export default class Home extends React.Component<Props & PropsWithRoute, State>
 
     return (
       <div className="home">
+        <h2>{store.title}</h2>
         <h3 className="name-title">Hello {name}</h3>
         <button className="toggle-status" onClick={this.toggle}>
           Toggle Status
@@ -48,6 +59,15 @@ export default class Home extends React.Component<Props & PropsWithRoute, State>
 
         {elementOne && <span>Element #1</span>}
         {!elementOne && <span>Another element</span>}
+
+        <hr />
+        {/* <Counter /> */}
+
+        <div>
+          {[1, 1 + 1, 1 + 1 + 1].map((id) => {
+            return <HomeInput key={id} id={id} />;
+          })}
+        </div>
       </div>
     );
   }

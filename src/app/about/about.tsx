@@ -2,8 +2,8 @@ import './about.css';
 
 import * as React from 'react';
 
-import AboutInfo from './about-info/about-info';
 import Gravatar from '../shared/gravatar/gravatar';
+import AboutInfo from './about-info/about-info';
 
 export interface Props {
   _?: any;
