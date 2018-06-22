@@ -4,8 +4,7 @@ import { createBrowserHistory } from 'history';
 import { inject, observer } from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
 import * as React from 'react';
-import { Link, Route } from 'react-router-dom';
-import { Router, Switch } from 'react-router-dom';
+import { Link, Route, Router, Switch } from 'react-router-dom';
 
 import About from './about/about';
 import Contact from './contact/contact';
