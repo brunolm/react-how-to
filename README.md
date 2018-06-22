@@ -1,7 +1,7 @@
 # React: How To
 
 [![Build Status](https://travis-ci.org/brunolm/react-how-to.svg?branch=master)](https://travis-ci.org/brunolm/react-how-to)
-[![Coverage Status](https://coveralls.io/repos/github/brunolm/react-how-to/badge.svg?branch=coveralls)](https://coveralls.io/github/brunolm/react-how-to?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/brunolm/react-how-to/badge.svg?branch=master)](https://coveralls.io/github/brunolm/react-how-to?branch=master)
 
 Each Pull Request will contain explanation and steps taken to complete a feature.
 
