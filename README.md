@@ -15,6 +15,7 @@ Each Pull Request will contain explanation and steps taken to complete a feature
 
 - [Configure prettier on pre-commit](https://github.com/brunolm/react-how-to/pull/12)
   - [Configure prettier to run on ts, tsx, css, md](https://github.com/brunolm/react-how-to/pull/15)
+- [Sort imports, tslint autofix](https://github.com/brunolm/react-how-to/pull/16)
 
 ## Mobx (redux like)
 
