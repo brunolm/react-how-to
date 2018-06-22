@@ -26,6 +26,7 @@
   "lint-staged": {
     "*.{ts,tsx,css,md}": [
       "prettier --write",
+      "npm run lint -- --fix",
       "git add"
     ]
   },
